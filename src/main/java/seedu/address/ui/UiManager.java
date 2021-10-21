@@ -12,6 +12,8 @@ import seedu.address.commons.core.LogsCenter;
 import seedu.address.commons.util.StringUtil;
 import seedu.address.logic.Logic;
 
+import static java.util.Objects.requireNonNull;
+
 /**
  * The manager of the UI component.
  */
@@ -30,6 +32,7 @@ public class UiManager implements Ui {
      */
     public UiManager(Logic logic) {
         super();
+        requireNonNull(logic);
         this.logic = logic;
     }
 
@@ -52,6 +55,7 @@ public class UiManager implements Ui {
     }
 
     private Image getImage(String imagePath) {
+        requireNonNull(imagePath);
         logger.info("Retrieving image resources...");
         return new Image(MainApp.class.getResourceAsStream(imagePath));
     }
@@ -66,7 +70,6 @@ public class UiManager implements Ui {
      */
     private static void showAlertDialogAndWait(Stage owner, AlertType type, String title, String headerText,
                                                String contentText) {
-        logger.warning(title + "\n" + headerText + "\n" + contentText);
         final Alert alert = new Alert(type);
         alert.getDialogPane().getStylesheets().add("view/NewTheme.css");
         alert.initOwner(owner);
