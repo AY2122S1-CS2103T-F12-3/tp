@@ -52,6 +52,7 @@ public class UiManager implements Ui {
     }
 
     private Image getImage(String imagePath) {
+        logger.info("Retrieving image resources...");
         return new Image(MainApp.class.getResourceAsStream(imagePath));
     }
 
@@ -65,8 +66,9 @@ public class UiManager implements Ui {
      */
     private static void showAlertDialogAndWait(Stage owner, AlertType type, String title, String headerText,
                                                String contentText) {
+        logger.warning(title + "\n" + headerText + "\n" + contentText);
         final Alert alert = new Alert(type);
-        alert.getDialogPane().getStylesheets().add("view/DarkTheme.css");
+        alert.getDialogPane().getStylesheets().add("view/NewTheme.css");
         alert.initOwner(owner);
         alert.setTitle(title);
         alert.setHeaderText(headerText);

@@ -31,6 +31,8 @@ public class TuteeCard extends UiPart<Region> {
     @FXML
     private Label name;
     @FXML
+    private Label overdue;
+    @FXML
     private Label id;
     @FXML
     private Label phone;
@@ -49,6 +51,9 @@ public class TuteeCard extends UiPart<Region> {
         this.tutee = tutee;
         id.setText(displayedIndex + ". ");
         name.setText(tutee.getName().fullName);
+        if (tutee.getPayment().isOverdue) {
+            overdue.setVisible(true);
+        }
         phone.setText(tutee.getPhone().value);
         address.setText(tutee.getAddress().value);
         level.setText(tutee.getLevel().stringRepresentation);
