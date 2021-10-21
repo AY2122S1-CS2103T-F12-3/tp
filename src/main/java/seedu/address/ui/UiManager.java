@@ -1,7 +1,5 @@
 package seedu.address.ui;
 
-import static java.util.Objects.requireNonNull;
-
 import java.util.logging.Logger;
 
 import javafx.application.Platform;
@@ -32,7 +30,6 @@ public class UiManager implements Ui {
      */
     public UiManager(Logic logic) {
         super();
-        requireNonNull(logic);
         this.logic = logic;
     }
 
@@ -55,8 +52,6 @@ public class UiManager implements Ui {
     }
 
     private Image getImage(String imagePath) {
-        requireNonNull(imagePath);
-        logger.info("Retrieving image resources...");
         return new Image(MainApp.class.getResourceAsStream(imagePath));
     }
 

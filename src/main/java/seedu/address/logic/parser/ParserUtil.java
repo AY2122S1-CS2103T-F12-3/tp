@@ -21,7 +21,6 @@ import seedu.address.model.tag.Tag;
 import seedu.address.model.tutee.Address;
 import seedu.address.model.tutee.Level;
 import seedu.address.model.tutee.Name;
-import seedu.address.model.tutee.Payment;
 import seedu.address.model.tutee.Phone;
 
 
@@ -75,20 +74,6 @@ public class ParserUtil {
         return new Phone(trimmedPhone);
     }
 
-    /**
-     * Parses a {@code String payment} into a {@code Payment}.
-     * Leading and trailing whitespaces will be trimmed.
-     *
-     * @throws ParseException if the given {@code payment} is invalid.
-     */
-    public static Payment parsePayment(String payment) throws ParseException {
-        requireNonNull(payment);
-        String trimmedPayment = payment.trim();
-        if (!Payment.isValidPayment(trimmedPayment)) {
-            throw new ParseException(Payment.MESSAGE_CONSTRAINTS);
-        }
-        return new Payment(trimmedPayment, null);
-    }
 
     /**
      * Parses a {@code String address} into an {@code Address}.
