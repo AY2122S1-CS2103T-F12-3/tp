@@ -1,5 +1,7 @@
 package seedu.address.ui;
 
+import static java.util.Objects.requireNonNull;
+
 import java.util.Comparator;
 
 import javafx.fxml.FXML;
@@ -48,6 +50,7 @@ public class TuteeCard extends UiPart<Region> {
      */
     public TuteeCard(Tutee tutee, int displayedIndex) {
         super(FXML);
+        requireNonNull(tutee);
         this.tutee = tutee;
         id.setText(displayedIndex + ". ");
         name.setText(tutee.getName().fullName);
