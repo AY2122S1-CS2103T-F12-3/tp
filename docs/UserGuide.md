@@ -126,6 +126,9 @@ e.g. `[subject/SUBJECT…]` subject keywords are optional and allows multiple ke
 
 Shows a message explaining how to access the help page.
 
+<p align="center">
+    <img src="help_ug.png" width="85%"/>
+</p>
 Format: `help`
 
 ### Adding a tutee: `add`
@@ -406,6 +409,17 @@ Format: `exit`
 **Q**: How do I transfer my data to another Computer?<br>
 **A**: Install the app in the other computer and overwrite the empty data file it creates with the file that contains the data of your previous Track-O home folder.
 
+**Q**: Why does my application look slightly different?<br>
+**A**: The screenshots in this User Guide are from an application running on **macOS**. If you are using Windows, your application would look something like this instead:
+
+<img src="windows_ug.png" width="85%"/>
+
+It is just a visual difference. Both applications have the same functionalities otherwise. 
+
+**Q**: Why doesn't pressing `F1` open the Help menu on my Mac?<br>
+**A**: Try pressing `Fn` + `F1` (The Function and the F1 key together) instead. This is due to how macOS handles function keys.
+
+
 --------------------------------------------------------------------------------------------------------------------
 
 ## Troubleshooting
@@ -416,7 +430,7 @@ If you do not have Java 11 installed and are unsure of which version to download
 1. Visit the Oracle website [here](https://www.oracle.com/java/technologies/downloads/#java11).
 2. Scroll down until you see **Java SE Development Kit 11.0.13**. You should see something similar to the image below.
 
-<img src="download_java.png" width="110%"/>
+<img src="download_java.png" width="100%"/>
 
 3. Click on **Java 11**.
 4. Select your own Operating System. If you are using a Mac or a MacBook, your Operating System is macOS. Otherwise, your Operating System is likely Windows. You may check your computer's [System Information](https://kb.wisc.edu/helpdesk/page.php?id=8208) to verify this.
